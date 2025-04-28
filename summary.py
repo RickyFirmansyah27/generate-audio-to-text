@@ -19,7 +19,7 @@ def summarize_text(text):
             },
             {
                 "role": "user",
-                "content": f"Tolong rangkum teks berikut dengan penjelasan secara scientific dan jelaskan setiap kalimat:\n\n{text}"
+                "content": f"Tolong rangkum teks berikut dengan penjelasan:\n\n{text}"
             }
         ],
         temperature=0.5,

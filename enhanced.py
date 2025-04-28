@@ -244,21 +244,6 @@ with st.container():
                         with st.container():
                             st.subheader("Transcription Text:")
                             st.markdown(f'<div class="transcription">{full_text}</div>', unsafe_allow_html=True)
-                                                        # Add copy button for transcription
-                            st.markdown(
-                                f"""
-                                <button onclick="navigator.clipboard.writeText(`{full_text}`)" style="
-                                    background-color: #3b82f6;
-                                    color: white;
-                                    border: none;
-                                    padding: 0.5rem 1rem;
-                                    border-radius: 8px;
-                                    cursor: pointer;
-                                    margin-top: 0.5rem;
-                                ">📋 Copy Transcription</button>
-                                """,
-                                unsafe_allow_html=True
-                            )
 
 
                         # Summary
@@ -268,12 +253,7 @@ with st.container():
                         # Summary card
                         with st.container():
                             st.subheader("Text Summary:")
-                            st.markdown(
-                                f"""
-                                <div class="summary" style="text-align: left;">{summary}</div>
-                                """,
-                                unsafe_allow_html=True
-                            )
+                            st.markdown(f'<div class="summary">{summary}</div>', unsafe_allow_html=True)
 
                     except Exception as e:
                         error_message = str(e)
