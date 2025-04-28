@@ -253,7 +253,12 @@ with st.container():
                         # Summary card
                         with st.container():
                             st.subheader("Text Summary:")
-                            st.markdown(f'<div class="summary">{summary}</div>', unsafe_allow_html=True)
+                            st.markdown(
+                                f"""
+                                <div class="summary" style="text-align: left;">{summary}</div>
+                                """,
+                                unsafe_allow_html=True
+                            )
 
                     except Exception as e:
                         error_message = str(e)
