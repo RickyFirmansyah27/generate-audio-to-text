@@ -49,7 +49,7 @@ if uploaded_file is not None:
                     language="en",
                     temperature=0.0
                 )
-
+    
         try:
             full_text = " ".join(seg["text"] for seg in transcription.segments if "text" in seg)
         except KeyError:
